@@ -28,12 +28,13 @@ class EditArticle extends Component
     {
         $this->validate();
 
-        Article::create([
-            'name'=>$this->name,
-            'body'=>$this->body,
-        ]);
+        $this->article->update(
+            [ 'name' => $this->name, 
+              'body' => $this->body,
+            ]);
 
-        $this->restore();
+        $this->reset(['name', 'body']);
+
 
        session()->flash('message', 'Articolo aggiornato correttamente.'); 
  
