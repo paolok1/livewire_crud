@@ -8,8 +8,8 @@ use Livewire\Component;
 class TableArticles extends Component
 {
 
-    public function destroy(Article $article){
-        $article->delete();
+    public function destroy(Article $articles){
+        $articles->delete();
     }
 
     public function render()

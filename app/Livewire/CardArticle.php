@@ -1,13 +1,18 @@
 <?php
-
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Article; // Assicurati di importare il modello Article
 
 class CardArticle extends Component
 {
+    public $articles;
 
-    public $article;
+    public function mount()
+    {
+        // Recuperiamo tutti gli articoli dal database
+        $this->articles = Article::all();
+    }
 
     public function render()
     {

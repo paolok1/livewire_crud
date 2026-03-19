@@ -1,3 +1,8 @@
 body{
     background-image: url(https://picsum.photos/1024);
 }
+
+.cardImg{
+    height: 18rem;
+    object-fit: cover;
+}
